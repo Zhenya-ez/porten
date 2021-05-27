@@ -1,0 +1,511 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 1920px;
+	margin: 0 auto;
+	font-family: "PT Sans", sans-serif;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+.header_top {
+	width: 100%;
+	height: 44px;
+	background-color: #000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contacts {
+	display: flex;
+	margin-left: 405px;
+}
+
+.contacts img {
+	margin-right: 15px;
+}
+
+.number,
+.text_exit,
+.text_registration,
+.exit p {
+	height: 16px;
+	top: 14px;
+	font-size: 12px;
+	line-height: 16px;
+	color: #969696;
+}
+
+.text_exit {
+	margin-right: 4px;
+}
+
+.text_registration {
+	margin-left: 4px;
+}
+
+.exit {
+	display: flex;
+	margin-right: 405px;
+}
+
+.exit img {
+	margin-right: 10px;
+}
+
+.header_nav {
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #0f0f0f;
+}
+
+.header_logo {
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 54px;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: "Playfair Display", serif;
+	margin-left: 405px;
+}
+
+.text_exit:hover,
+.text_registration:hover,
+.header_logo:hover,
+.footer_menu a:hover,
+.footer_form button:hover {
+	color: rgba(192, 192, 192, 0.609);
+}
+
+.nav_item {
+	margin-right: 405px;
+}
+
+.nav_item a {
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: #ffffff;
+	margin: 0 0 30px 30px;
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* ? як зробити розмір бекграунду */
+.nav_item a:hover {
+	color: rgba(192, 192, 192, 0.609);
+}
+
+.first_screen {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 810px;
+	background: url(/img/first-screen.png) no-repeat;
+	padding-top: 29px;
+}
+
+.titles {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 320px;
+	height: 320px;
+	margin: 0;
+	padding: 0;
+	border: 4px solid #fff;
+	color: #fff;
+}
+
+.main_title {
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 96px;
+	color: #fff;
+	width: 195px;
+	height: 86px;
+	font-family: "Playfair Display", serif;
+	border-bottom: 2px solid #fff;
+	text-transform: uppercase;
+}
+
+.subtitle {
+	font-style: normal;
+	font-weight: normal;
+	width: 190px;
+	height: 44px;
+	left: 64px;
+	top: 182px;
+	font-size: 22px;
+	line-height: 28px;
+	text-transform: uppercase;
+	color: #fff;
+	margin-top: 10px;
+	padding-left: 4px;
+}
+
+.first_text {
+	width: 730px;
+	height: 96px;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	margin-top: 80px;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.second_screen {
+	display: flex;
+	height: 730px;
+}
+
+.left_screen {
+	background-color: #000;
+	width: 1040px;
+	height: 730px;
+}
+
+.season {
+	font-family: "Playfair Display", serif;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 48px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 93px 0 50px 0;
+}
+
+.line {
+	border: 1px solid #fff;
+	width: 120px;
+	margin: 0 0 50px 460px;
+}
+
+.wraper_watch_card,
+.wraper_watch_card2 {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+.watch {
+	/* display: flex; */
+	background-color: #191b1c;
+	width: 260px;
+	height: 325px;
+}
+
+.watch img {
+	padding: 55px 0 0 22px;
+}
+
+.watch_title {
+	font-family: "Playfair Display", serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: #fff;
+	padding: 25px 0 10px 0;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.watch_price {
+	font-family: "Playfair Display", serif;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 21px;
+	color: #d0d0d0;
+}
+
+.right_screen {
+	align-items: center;
+	background: url(/img/man.png) no-repeat;
+	width: 880px;
+	height: 730px;
+}
+
+.new_collection {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 48px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Playfair Display", serif;
+	color: #fff;
+	padding-top: 484px;
+}
+
+.line_2 {
+	width: 120px;
+	border: 1px solid #fff;
+	margin: 30px 0 50px 381px;
+}
+
+.catalog,
+.view_collection {
+	width: 138px;
+	height: 47px;
+	border: 1px solid #fff;
+	margin-left: 371px;
+	background-color: transparent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 23px;
+	text-align: center;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 10px 25px 10px 25px;
+}
+
+.catalog:hover,
+.view_collection:hover {
+	background-color: rgba(192, 192, 192, 0.609);
+}
+
+.third_screen {
+	display: flex;
+	height: 600px;
+}
+
+.collection {
+	width: 1040px;
+	background-color: #000;
+}
+
+.collection h3 {
+	font-family: "Playfair Display", serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 48px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 100px 0 40px 0;
+}
+
+.line_3 {
+	border: 1px solid #fff;
+	width: 120px;
+	margin: 0 0 40px 460px;
+}
+
+.collection_2018 {
+	width: 471px;
+	height: 173px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 21px;
+	text-align: center;
+	color: #fff;
+	margin: 0 0 61px 285px;
+}
+
+.fourth_screen {
+	width: 100%;
+	height: 1289px;
+	background-color: #000;
+}
+
+.fourth_screen h3 {
+	font-family: "Playfair Display", serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 48px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 120px 0 40px 0;
+}
+
+.line_4 {
+	border: 1px solid #fff;
+	width: 120px;
+	margin: 0 0 80px 900px;
+}
+
+.fifth_screen {
+	width: 100%;
+	height: 362px;
+	background: #0f0f0f;
+}
+
+.fifth_screen h3 {
+	font-family: "Playfair Display", serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 48px;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 60px 0 40px 815px;
+}
+
+.line_5 {
+	border: 1px solid #fff;
+	width: 120px;
+	margin: 0 0 40px 900px;
+}
+
+.brends {
+	display: flex;
+	justify-content: center;
+}
+
+.brends img {
+	margin: 0 30px 80px 0;
+}
+
+footer {
+	height: 400px;
+	width: 100%;
+	background: url(/img/footer.png) no-repeat;
+}
+
+.footer_titles {
+	display: flex;
+	font-family: "Playfair Display", serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 32px;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 80px 0 0 0;
+}
+
+.footer_titles p:first-child {
+	padding: 0 229px 0 405px;
+}
+
+.footer_titles p:nth-child(2) {
+	padding: 0 238px 0 0;
+}
+
+.footer_main {
+	display: flex;
+}
+
+.footer_text {
+	width: 350px;
+	height: 147px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 150%;
+	color: #fff;
+	margin: 40px 31px 101px 405px;
+}
+
+.footer_menu {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	width: 365px;
+	height: 100px;
+	margin: 50px 0 0 0;
+}
+
+.footer_menu a {
+	color: white;
+	background: #0f0f0f;
+	padding: 10px 20px;
+	margin: 10px 20px 20px 0;
+}
+
+.distribution p {
+	width: 350px;
+	height: 42px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 21px;
+	color: #fff;
+	margin: 40px 0 37px 17px;
+}
+
+.footer_form {
+	margin: 37px 0 0 17px;
+}
+
+.footer_form input {
+	width: 210px;
+	height: 42px;
+	background: rgba(255, 255, 255, 0.4);
+	border: none;
+	opacity: 0.9;
+}
+
+.footer_form input::placeholder {
+	color: #ababab;
+}
+
+.footer_form button {
+	padding: 10px 20px;
+	width: 180px;
+	height: 41px;
+	background: #0f0f0f;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: 0.05em;
+	color: #fff;
+	border: none;
+	text-transform: uppercase;
+}
+
+.footer_down {
+	width: 100%;
+	height: 50px;
+	background-color: black;
+	display: flex;
+	align-items: center;
+}
+
+.footer_down p {
+	margin: 0 800px 0 405px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	color: #d0d0d0;
+}
+
+.footer_down a {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 16px;
+	text-decoration-line: underline;
+	color: #d0d0d0;
+}
