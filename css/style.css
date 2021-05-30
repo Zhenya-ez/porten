@@ -42,7 +42,7 @@ li {
 
 .phone_icon {
 	margin: 3px 15px 0 0;
-	background: url(/img/phone.svg) no-repeat;
+	background: url(../img/phone.svg) no-repeat;
 	width: 16px;
 	height: 16px;
 }
@@ -74,7 +74,7 @@ li {
 }
 
 .exit_icon {
-	background: url(/img/exit.svg) no-repeat;
+	background: url(../img/exit.svg) no-repeat;
 	margin-right: 10px;
 	width: 16px;
 	height: 16px;
@@ -138,13 +138,13 @@ li {
 }
 
 .basket_icon {
-	background: url(/img/basket.svg) no-repeat;
+	background: url(../img/basket.svg) no-repeat;
 	width: 22px;
 	height: 22px;
 }
 
 .search_icon {
-	background: url(/img/search.svg) no-repeat;
+	background: url(../img/search.svg) no-repeat;
 	width: 22px;
 	height: 22px;
 }
@@ -158,7 +158,7 @@ li {
 	padding: 0;
 	width: 100%;
 	height: 810px;
-	background: url(porten/img/first-screen.png) no-repeat;
+	background: url(../img/first-screen.png);
 	padding-top: 29px;
 }
 
@@ -268,7 +268,7 @@ li {
 }
 
 .right_screen {
-	background: url(/img/man.png);
+	background: url(../img/man.png);
 	width: 880px;
 	height: 730px;
 }
@@ -392,7 +392,7 @@ li {
 footer {
 	height: 400px;
 	width: 100%;
-	background: url(/img/footer.png) no-repeat;
+	background: url(../img/footer.png) no-repeat;
 }
 
 .footer_wrapper {
