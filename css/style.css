@@ -9,18 +9,27 @@
 
 body {
 	width: 1920px;
+	/* height: 100%; */
 	margin: 0 auto;
 	font-family: "PT Sans", sans-serif;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
+	background-color: #000;
 }
 
 a {
 	text-decoration: none;
 }
 
+ul,
+li {
+  list-style-type: none;
+}
+
 .header_top {
-	width: 100%;
+	width: 1116px;
 	height: 44px;
+	margin: 0 auto;
 	background-color: #000;
 	display: flex;
 	justify-content: space-between;
@@ -29,22 +38,27 @@ a {
 
 .contacts {
 	display: flex;
-	margin-left: 405px;
 }
 
-.contacts img {
-	margin-right: 15px;
+.phone_icon {
+	margin: 3px 15px 0 0;
+	background: url(/img/phone.svg) no-repeat;
+	width: 16px;
+	height: 16px;
 }
 
-.number,
+.contacts li,
+.contacts a,
 .text_exit,
 .text_registration,
 .exit p {
 	height: 16px;
-	top: 14px;
-	font-size: 12px;
-	line-height: 16px;
+	font: 12px/16px PT Sans;
 	color: #969696;
+}
+
+.contacts li, .contacts div {
+	display: inline;
 }
 
 .text_exit {
@@ -57,30 +71,34 @@ a {
 
 .exit {
 	display: flex;
-	margin-right: 405px;
 }
 
-.exit img {
+.exit_icon {
+	background: url(/img/exit.svg) no-repeat;
 	margin-right: 10px;
+	width: 16px;
+	height: 16px;
 }
 
 .header_nav {
 	width: 100%;
 	height: 80px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	background-color: #0f0f0f;
 }
 
+.header_wrapper {
+	width: 1116px;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .header_logo {
-	font-weight: bold;
-	font-size: 32px;
-	line-height: 54px;
+	font: bold 32px/54px "Playfair Display", serif;
 	color: #fff;
 	text-transform: uppercase;
-	font-family: "Playfair Display", serif;
-	margin-left: 405px;
 }
 
 .text_exit:hover,
@@ -92,22 +110,43 @@ a {
 }
 
 .nav_item {
-	margin-right: 405px;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
-.nav_item a {
-	font-size: 14px;
-	line-height: 18px;
+.nav_item a, .nav_item div {
+	font: 14px/18px PT Sans;
 	text-transform: uppercase;
 	color: #ffffff;
-	margin: 0 0 30px 30px;
-	font-style: normal;
-	font-weight: normal;
+	margin: 0 0 0 30px;
 }
 
 /* ? як зробити розмір бекграунду */
 .nav_item a:hover {
 	color: rgba(192, 192, 192, 0.609);
+}
+
+.icons {
+	display: flex;
+}
+
+.icons div {
+	margin-left: 40px;
+}
+
+.basket_icon {
+	background: url(/img/basket.svg) no-repeat;
+	width: 22px;
+	height: 22px;
+}
+
+.search_icon {
+	background: url(/img/search.svg) no-repeat;
+	width: 22px;
+	height: 22px;
 }
 
 .first_screen {
@@ -137,26 +176,18 @@ a {
 }
 
 .main_title {
-	font-weight: bold;
-	font-size: 48px;
-	line-height: 96px;
+	font: bold 48px/96px "Playfair Display", serif;
 	color: #fff;
 	width: 195px;
 	height: 86px;
-	font-family: "Playfair Display", serif;
 	border-bottom: 2px solid #fff;
 	text-transform: uppercase;
 }
 
 .subtitle {
-	font-style: normal;
-	font-weight: normal;
 	width: 190px;
 	height: 44px;
-	left: 64px;
-	top: 182px;
-	font-size: 22px;
-	line-height: 28px;
+	font: normal normal 22px/28px PT Sans;
 	text-transform: uppercase;
 	color: #fff;
 	margin-top: 10px;
@@ -166,14 +197,11 @@ a {
 .first_text {
 	width: 730px;
 	height: 96px;
-	font-size: 16px;
-	line-height: 24px;
+	font: normal normal 16px/24px PT Sans;
 	text-align: center;
 	text-transform: uppercase;
 	color: #fff;
 	margin-top: 80px;
-	font-style: normal;
-	font-weight: normal;
 }
 
 .second_screen {
@@ -188,10 +216,7 @@ a {
 }
 
 .season {
-	font-family: "Playfair Display", serif;
-	font-weight: bold;
-	font-size: 36px;
-	line-height: 48px;
+	font: bold 36px/48px "Playfair Display", serif;
 	text-align: center;
 	text-transform: uppercase;
 	color: #fff;
@@ -201,6 +226,15 @@ a {
 .line {
 	border: 1px solid #fff;
 	width: 120px;
+}
+
+/* ? як забрати маржин 460 якщо не працюють флєкси */
+.line_1 {
+	/* height: 1px;
+	width: 120px; */
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
 	margin: 0 0 50px 460px;
 }
 
@@ -213,7 +247,6 @@ a {
 }
 
 .watch {
-	/* display: flex; */
 	background-color: #191b1c;
 	width: 260px;
 	height: 325px;
@@ -224,45 +257,40 @@ a {
 }
 
 .watch_title {
-	font-family: "Playfair Display", serif;
-	font-size: 18px;
-	line-height: 24px;
+	font: 18px/24px "Playfair Display", serif;
 	color: #fff;
 	padding: 25px 0 10px 0;
-	font-style: normal;
-	font-weight: normal;
 }
 
 .watch_price {
-	font-family: "Playfair Display", serif;
-	font-weight: bold;
-	font-size: 16px;
-	line-height: 21px;
+	font: bold 16px/21px "Playfair Display", serif;
 	color: #d0d0d0;
 }
 
 .right_screen {
-	align-items: center;
-	background: url(/img/man.png) no-repeat;
+	background: url(/img/man.png);
 	width: 880px;
 	height: 730px;
 }
 
+.collection_wrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 100px;
+}
+
 .new_collection {
-	font-style: normal;
-	font-weight: bold;
-	font-size: 36px;
-	line-height: 48px;
-	text-align: center;
+	font: bold 36px/48px "Playfair Display", serif;
 	text-transform: uppercase;
-	font-family: "Playfair Display", serif;
 	color: #fff;
-	padding-top: 484px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 }
 
 .line_2 {
-	width: 120px;
-	border: 1px solid #fff;
 	margin: 30px 0 50px 381px;
 }
 
@@ -273,10 +301,7 @@ a {
 	border: 1px solid #fff;
 	margin-left: 371px;
 	background-color: transparent;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 23px;
+	font: 18px/23px PT Sans;
 	text-align: center;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
@@ -300,11 +325,7 @@ a {
 }
 
 .collection h3 {
-	font-family: "Playfair Display", serif;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 36px;
-	line-height: 48px;
+	font: 36px/48px "Playfair Display", serif;
 	text-align: center;
 	text-transform: uppercase;
 	color: #fff;
@@ -312,18 +333,13 @@ a {
 }
 
 .line_3 {
-	border: 1px solid #fff;
-	width: 120px;
 	margin: 0 0 40px 460px;
 }
 
-.collection_2018 {
+.collection_old {
 	width: 471px;
 	height: 173px;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 21px;
+	font: 14px/21px PT Sans;
 	text-align: center;
 	color: #fff;
 	margin: 0 0 61px 285px;
@@ -336,11 +352,7 @@ a {
 }
 
 .fourth_screen h3 {
-	font-family: "Playfair Display", serif;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 36px;
-	line-height: 48px;
+	font: normal bold 36px/48px "Playfair Display", serif;
 	text-align: center;
 	text-transform: uppercase;
 	color: #fff;
@@ -348,8 +360,6 @@ a {
 }
 
 .line_4 {
-	border: 1px solid #fff;
-	width: 120px;
 	margin: 0 0 80px 900px;
 }
 
@@ -360,19 +370,13 @@ a {
 }
 
 .fifth_screen h3 {
-	font-family: "Playfair Display", serif;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 36px;
-	line-height: 48px;
+	font: normal bold 36px/48px "Playfair Display", serif;
 	text-transform: uppercase;
 	color: #fff;
 	padding: 60px 0 40px 815px;
 }
 
 .line_5 {
-	border: 1px solid #fff;
-	width: 120px;
 	margin: 0 0 40px 900px;
 }
 
@@ -391,39 +395,39 @@ footer {
 	background: url(/img/footer.png) no-repeat;
 }
 
-.footer_titles {
+.footer_wrapper {
+	width: 1110px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.footer_main h3 {
 	display: flex;
-	font-family: "Playfair Display", serif;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 24px;
-	line-height: 32px;
+	font: 24px/32px "Playfair Display", serif;
 	text-transform: uppercase;
 	color: #fff;
 	padding: 80px 0 0 0;
-}
-
-.footer_titles p:first-child {
-	padding: 0 229px 0 405px;
-}
-
-.footer_titles p:nth-child(2) {
-	padding: 0 238px 0 0;
 }
 
 .footer_main {
 	display: flex;
 }
 
+.footer_left {
+	width: 350px;
+	height: 100%;
+}
+
 .footer_text {
 	width: 350px;
 	height: 147px;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 150%;
+	font: 14px/150% PT Sans;
 	color: #fff;
-	margin: 40px 31px 101px 405px;
+	margin: 40px 31px 101px 0;
+}
+
+.footer_center {
+	margin: 0 92px 0 30px;
 }
 
 .footer_menu {
@@ -432,29 +436,25 @@ footer {
 	align-content: center;
 	width: 365px;
 	height: 100px;
-	margin: 50px 0 0 0;
+	margin: 40px 0 0 0;
+}
+
+.footer_menu li {
+	margin: 20px 20px 20px 0;
 }
 
 .footer_menu a {
 	color: white;
 	background: #0f0f0f;
 	padding: 10px 20px;
-	margin: 10px 20px 20px 0;
 }
 
 .distribution p {
-	width: 350px;
+	width: 390px;
 	height: 42px;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 21px;
+	font: 14px/21px PT Sans;
 	color: #fff;
-	margin: 40px 0 37px 17px;
-}
-
-.footer_form {
-	margin: 37px 0 0 17px;
+	margin: 40px 0 37px 0;
 }
 
 .footer_form input {
@@ -462,7 +462,6 @@ footer {
 	height: 42px;
 	background: rgba(255, 255, 255, 0.4);
 	border: none;
-	opacity: 0.9;
 }
 
 .footer_form input::placeholder {
@@ -471,13 +470,9 @@ footer {
 
 .footer_form button {
 	padding: 10px 20px;
-	width: 180px;
 	height: 41px;
 	background: #0f0f0f;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 21px;
+	font: 14px/21px PT Sans;
 	letter-spacing: 0.05em;
 	color: #fff;
 	border: none;
@@ -485,27 +480,22 @@ footer {
 }
 
 .footer_down {
-	width: 100%;
+	width: 1190px;
 	height: 50px;
 	background-color: black;
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
+	margin: 0 auto;
 }
 
-.footer_down p {
-	margin: 0 800px 0 405px;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 12px;
-	line-height: 16px;
+.footer_down h6 {
+	font: 12px/16px PT Sans;
 	color: #d0d0d0;
 }
 
 .footer_down a {
-	font-style: normal;
-	font-weight: bold;
-	font-size: 12px;
-	line-height: 16px;
+	font: normal bold 12px/16px PT Sans;
 	text-decoration-line: underline;
 	color: #d0d0d0;
 }
